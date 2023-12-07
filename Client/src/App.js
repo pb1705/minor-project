@@ -21,7 +21,7 @@ const App = () => {
     const formData = new FormData();
     formData.append("file",data);
     const formData2 = new FormData();
-    const response = await fetch("http://localhost:5000/getClass",{
+    const response = await fetch("https://echosecure.onrender.com/getClass",{
       method:"POST",
       body:formData
       
@@ -29,7 +29,7 @@ const App = () => {
     const responseData = await response.json();
     formData2.append("filename",responseData.count);
     
-    const res = await fetch("http://localhost:5000/get_processed_image",{
+    const res = await fetch("https://echosecure.onrender.com/get_processed_image",{
       method:"POST",
       body:formData2
       
