@@ -21,7 +21,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 count=0
 classnames = ['ali', 'daksh', 'khan', 'prath', 'raj']
 #load model pickel file
-with open(r'.\model\model_saved.unknown', 'rb') as f:
+with open('./model/model_saved.unknown', 'rb') as f:
     model = pickle.load(f)
 
 
